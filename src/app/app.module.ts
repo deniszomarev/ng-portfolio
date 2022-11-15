@@ -14,9 +14,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ZdHeaderComponent } from './base-ui/zd-header/zd-header.component';
 import { TuiTabsModule } from '@taiga-ui/kit';
+import { BoldDirective } from './shared/directives/bold.directive';
 
 @NgModule({
-  declarations: [AppComponent, ZdHeaderComponent],
+  declarations: [AppComponent, ZdHeaderComponent, BoldDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,

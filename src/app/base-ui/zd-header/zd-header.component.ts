@@ -12,11 +12,9 @@ export class ZdHeaderComponent {
   readonly tabs = [
     `Progects`,
     `Tehnologies`,
-    this.collaborators,
-    `Michael Palin`,
-    `Terry Jones`,
-    `Terry Gilliam`,
-    `Graham Chapman`,
+    `Summary`,
+    `Higher education`,
+    `Contacts`,
   ];
 
   activeElement = String(this.tabs[0]);
@@ -25,7 +23,7 @@ export class ZdHeaderComponent {
 
   get activeItemIndex(): number {
     if (this.collaborators.includes(this.activeElement)) {
-      return this.tabs.indexOf(this.collaborators);
+      // return this.tabs.indexOf(this.collaborators);
     }
 
     return this.tabs.indexOf(this.activeElement);
