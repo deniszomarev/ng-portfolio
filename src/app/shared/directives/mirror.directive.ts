@@ -6,16 +6,21 @@ import {
   OnInit,
   HostBinding,
   TemplateRef,
+  ViewContainerRef,
 } from '@angular/core';
 
 @Directive({
   selector: '[mirror]',
 })
 export class MirrowDirective implements OnInit {
-  constructor(private element: ElementRef, private renderer2: Renderer2) {}
+  constructor(
+    private element: ElementRef,
+    private renderer2: Renderer2,
+    private _viewContainer: ViewContainerRef
+  ) {}
 
   public ngOnInit(): void {
-    console.log(this.element);
+    console.log(this._viewContainer);
     this.mirrorTabs();
   }
 
