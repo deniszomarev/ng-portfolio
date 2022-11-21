@@ -15,9 +15,10 @@ import { AppComponent } from './app.component';
 import { ZdHeaderComponent } from './base-ui/zd-header/zd-header.component';
 import { TuiTabsModule } from '@taiga-ui/kit';
 import { TuiModeModule } from '@taiga-ui/core';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
-  declarations: [AppComponent, ZdHeaderComponent],
+  declarations: [AppComponent, ZdHeaderComponent, ProjectsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

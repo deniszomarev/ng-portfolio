@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <h1 class="tui-text_h3 title">Monty Python</h1>
+  <h1 class="tui-text_h3 title">My name is Denis Zomarev</h1>
   <tui-tabs-with-more
     class="tabs"
     [activeItemIndex]="activeItemIndex"
@@ -7,7 +7,12 @@
   >
     <ng-container *ngFor="let tab of tabs">
       <ng-container *ngIf="isString(tab); else submenu">
-        <button *tuiItem tuiTab (click)="onClick(tab)">
+        <button
+          *tuiItem
+          tuiTab
+          [routerLink]="'/' + tab.toLowerCase()"
+          (click)="onClick(tab)"
+        >
           {{ tab }}
         </button>
       </ng-container>

@@ -7,10 +7,10 @@ import { tuiIsString } from '@taiga-ui/cdk';
   styleUrls: ['./zd-header.component.scss'],
 })
 export class ZdHeaderComponent {
-  readonly collaborators = [`Carol Cleveland`, `Neil Innes`];
+  readonly collaborators = [`ss`, `ss`];
 
   readonly tabs = [
-    `Progects`,
+    `Projects`,
     `Tehnologies`,
     `Summary`,
     `Higher education`,
