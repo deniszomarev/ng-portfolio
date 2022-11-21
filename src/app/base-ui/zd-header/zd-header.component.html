@@ -1,14 +1,13 @@
-<div tuiMode="onLight" class="wrapper">
-  <h1 class="tui-text_h3 title" bold>Monty Python</h1>
+<div class="wrapper">
+  <h1 class="tui-text_h3 title">Monty Python</h1>
   <tui-tabs-with-more
-    mirror
     class="tabs"
     [activeItemIndex]="activeItemIndex"
     [moreContent]="more"
   >
     <ng-container *ngFor="let tab of tabs">
       <ng-container *ngIf="isString(tab); else submenu">
-        <button count *tuiItem tuiTab (click)="onClick(tab)">
+        <button *tuiItem tuiTab (click)="onClick(tab)">
           {{ tab }}
         </button>
       </ng-container>
