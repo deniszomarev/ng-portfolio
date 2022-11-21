@@ -13,12 +13,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ZdHeaderComponent } from './base-ui/zd-header/zd-header.component';
-import { TuiTabsModule } from '@taiga-ui/kit';
+import { TuiIslandModule, TuiTabsModule } from '@taiga-ui/kit';
 import { TuiModeModule } from '@taiga-ui/core';
 import { ProjectsComponent } from './projects/projects.component';
+import { CardComponent } from './base-ui/card/card.component';
 
 @NgModule({
-  declarations: [AppComponent, ZdHeaderComponent, ProjectsComponent],
+  declarations: [AppComponent, ZdHeaderComponent, ProjectsComponent, CardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -31,6 +32,7 @@ import { ProjectsComponent } from './projects/projects.component';
     TuiDataListModule,
     TuiSvgModule,
     TuiModeModule,
+    TuiIslandModule
   ],
   providers: [],
   bootstrap: [AppComponent],
