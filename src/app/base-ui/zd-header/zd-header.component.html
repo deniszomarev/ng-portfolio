@@ -8,7 +8,7 @@
   >
     <ng-container *ngFor="let tab of tabs">
       <ng-container *ngIf="isString(tab); else submenu">
-        <button *tuiItem tuiTab (click)="onClick(tab)">
+        <button count *tuiItem tuiTab (click)="onClick(tab)">
           {{ tab }}
         </button>
       </ng-container>

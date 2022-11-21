@@ -16,9 +16,10 @@ import { ZdHeaderComponent } from './base-ui/zd-header/zd-header.component';
 import { TuiTabsModule } from '@taiga-ui/kit';
 import { BoldDirective } from './shared/directives/bold.directive';
 import { MirrowDirective } from './shared/directives/mirror.directive';
+import { CountDirective } from './shared/directives/button-count.directive';
 
 @NgModule({
-  declarations: [AppComponent, ZdHeaderComponent, BoldDirective, MirrowDirective],
+  declarations: [AppComponent, ZdHeaderComponent, BoldDirective, MirrowDirective, CountDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,

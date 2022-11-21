@@ -1,35 +1,39 @@
 import {
-    Directive,
-    ElementRef,
-    Renderer2,
-    HostListener,
-    OnInit,
-    HostBinding,
-    TemplateRef,
-    ViewContainerRef,
-  } from '@angular/core';
-  
-  @Directive({
-    selector: '[count]',
-  })
-  export class CountDirective implements OnInit {
-    constructor(
-      private element: ElementRef,
-      private renderer2: Renderer2,
-      private _viewContainer: ViewContainerRef
-    ) {}
-  
-    public ngOnInit(): void {
-    //   console.log(this._viewContainer);
-    //   this.mirrorTabs();
+  Directive,
+  ElementRef,
+  Renderer2,
+  HostListener,
+  OnInit,
+  HostBinding,
+  TemplateRef,
+  ViewContainerRef,
+} from '@angular/core';
+import { count } from 'rxjs';
+
+@Directive({
+  selector: '[count]',
+})
+export class CountDirective implements OnInit {
+  private counter: number = 0;
+
+  constructor(private element: ElementRef, private renderer: Renderer2) {}
+
+  public ngOnInit(): void {}
+
+  @HostListener('click') onMouseClick() {
+    this.counter++;
+    let text = this.renderer.createText(this.counter.toString());
+    const countText = this.renderer.createElement('span');
+    this.renderer.appendChild(countText, text);
+
+    if (this.element.nativeElement.childNodes[2]) {
+      this.renderer.removeChild(
+        this.element.nativeElement,
+        this.element.nativeElement.childNodes[
+          this.element.nativeElement.childNodes.length - 1
+        ]
+      );
     }
-  
-    // private mirrorTabs(): void {
-    //   this.renderer2.setStyle(
-    //     this.element.nativeElement.childNodes[1].childNodes[0],
-    //     'flex-direction',
-    //     'row-reverse'
-    //   );
-    // }
+    this.renderer.appendChild(this.element.nativeElement, countText);
   }
-  
+}
