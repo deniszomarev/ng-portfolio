@@ -4,6 +4,19 @@
   max-width: 62.5rem;
 }
 
+.tui-island {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @include shadow(1);
+  transition-duration: 0.5s;
+  &:hover {
+    @include shadow(5);
+    transition-duration: 0.5s;
+  }
+}
+
 .title {
   font: var(--tui-font-heading-4);
   //   margin: 0 0 space * 4;
@@ -24,4 +37,9 @@
   max-width: calc(100% + 2.5rem);
   margin: -1.25rem -1.25rem 1.25rem;
   border-radius: var(--tui-radius-l) var(--tui-radius-l) 0 0;
+}
+
+.button {
+  margin: 0px 10px 0px 10px;
+  min-width: 70px;
 }

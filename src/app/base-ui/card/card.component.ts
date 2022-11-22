@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -16,10 +16,12 @@ export class CardComponent implements OnInit {
     testValue: new FormControl(``, Validators.required),
   });
 
-  collapsingText =
-    `Lorem ipsum dolor sit amet, consectetur adipiscing elit ` +
-    `sed do eiusmod tempor incididunt ut labore et dolore ` +
-    `magna aliqua.`;
+  @Input() public collapsingText: string | undefined;
+  @Input() public languages: string | undefined;
+  @Input() public projectImage: string | undefined;
+  @Input() public projectName: string | undefined;
+  @Input() public projectSite: string | undefined;
+  @Input() public projectSource: string | undefined;
 
   get linesLimit(): number {
     return this.expanded ? 10 : 3;

@@ -1,24 +1,37 @@
 <div class="container">
   <div class="tui-row">
     <div class="tui-col_md-4">
-      <tui-island size="l" [hoverable]="true">
+      <tui-island size="l" [hoverable]="false">
         <img alt="Taiga" class="image" [src]="bannerImage" />
-        <h3 class="title title_size_s">Title</h3>
+        <h3 class="title title_size_s">Repository name</h3>
         <p class="text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua
+          {{collapsingText}}
         </p>
-        <a
-          tuiButton
-          type="button"
-          href="https://ng-web-apis.github.io"
-          mode="secondary"
-          size="m"
-          target="_blank"
-          class="button"
-        >
-          Visit a website
-        </a>
+        <p class="languages">{{languages}}</p>
+        <div>
+          <a
+            tuiButton
+            type="button"
+            href="https://ng-web-apis.github.io"
+            mode="secondary"
+            size="s"
+            target="_blank"
+            class="button"
+          >
+            Site
+          </a>
+          <a
+            tuiButton
+            type="button"
+            href="https://ng-web-apis.github.io"
+            mode="secondary"
+            size="s"
+            target="_blank"
+            class="button"
+          >
+            Source
+          </a>
+        </div>
       </tui-island>
     </div>
   </div>
