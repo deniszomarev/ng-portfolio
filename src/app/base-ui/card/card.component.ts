@@ -22,6 +22,7 @@ export class CardComponent implements OnInit {
   @Input() public projectName: string | undefined;
   @Input() public projectSite: string | undefined;
   @Input() public projectSource: string | undefined;
+  //  @Input() public projectSource: string | undefined;
 
   get linesLimit(): number {
     return this.expanded ? 10 : 3;
